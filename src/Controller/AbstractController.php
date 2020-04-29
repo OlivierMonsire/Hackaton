@@ -65,7 +65,14 @@ abstract class AbstractController
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
         }
 
-        var_dump($_SESSION);
+        if (empty($_SESSION['exit'])) {
+            $random = rand(0, 1);
+            if ($random < 0.5) {
+                $_SESSION['exit'] = 135;
+            } else {
+                $_SESSION['exit'] = 100;
+            }
+        }
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(

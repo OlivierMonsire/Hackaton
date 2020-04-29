@@ -33,6 +33,10 @@ class GameController extends AbstractController
             $messages[] = 'You got the object, find exit to get out';
         }
 
+        if ($_SESSION['objectTaken'] == true && $roomNumber == $_SESSION['exit']) {
+            header('location: /./home/replay');
+        }
+
         $accessibleRooms = $roomManager->getAccessibleRooms($roomNumber);
 
         $objectId = $_SESSION['arts'][$roomNumber];
