@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\MuseumManager;
+use App\Model\RoomManager;
 use Twig\Environment;
 use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
@@ -29,13 +31,30 @@ abstract class AbstractController
      */
     public function __construct()
     {
-        if (empty($_SESSION)) {
+
+        $status = session_status();
+        if ($status == PHP_SESSION_NONE) {
             session_start();
+        }
+
+        if (empty($_SESSION)) {
             $_SESSION['login_name'] = 'Benoit';
             $_SESSION['arts']=array();
             //var_dump($museumManager->getIdFromDpt(30));
-        }
+            $museumManager=new MuseumManager();
+            //var_dump($museumManager->getObject(543863));
+            $roomManager = new RoomManager();
+            $roomNumbers = $roomManager->getRoomNumbers();
+            $getID = $museumManager->getIdFromDpt(count($roomNumbers));
 
+            $countID=count($getID);
+
+            for ($i=0; $i<$countID; $i++) {
+                $roomNumber = $roomNumbers[$i];
+                $artwork = $getID[$i];
+                $_SESSION['arts'][$roomNumber]=$artwork;
+            }
+        }
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
