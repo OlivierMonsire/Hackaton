@@ -2,13 +2,16 @@
 
 {% block content %}
     <section class="row">
-        <div class="col-6">
+        <div class="col-4">
             {% include 'Game/_map.html.twig' %}
         </div>
-        <div class="col-6">
+        <div class="col-4">
+            {% include 'Game/_help.html.twig' %}
+        </div>
+        <div class="col-4">
             {% include 'Game/_img.html.twig' %}
         </div>
-        <div class="col">
+        <div class="col-4">
             {% include 'Game/_navRoom.html.twig' %}
         </div>
     </section>
