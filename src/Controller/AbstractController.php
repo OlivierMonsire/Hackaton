@@ -29,13 +29,13 @@ abstract class AbstractController
      */
     public function __construct()
     {
-
-
-        if(empty($_SESSION)){
+        if (empty($_SESSION)) {
             session_start();
             $_SESSION['login_name'] = 'Benoit';
             $_SESSION['arts']=array();
+            //var_dump($museumManager->getIdFromDpt(30));
         }
+
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(

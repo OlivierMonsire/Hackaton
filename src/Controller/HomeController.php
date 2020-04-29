@@ -23,9 +23,13 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        //$museumManager=new MuseumManager();
-        //var_dump($museumManager->getObject(543863));
-        //var_dump($museumManager->getIdFromDpt(30));
+        $museumManager=new MuseumManager();
+        var_dump($museumManager->getObject(543863));
+        $getID = $museumManager->getIdFromDpt(30);
+        foreach ($getID as $id){
+            $_SESSION['arts'][] = $id;
+        }
+        var_dump ( $_SESSION['arts']);
 
         return $this->twig->render('Home/index.html.twig');
     }
