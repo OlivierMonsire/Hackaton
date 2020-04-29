@@ -20,12 +20,19 @@ class GameController extends AbstractController
     public function index($roomNumber = null)
     {
         $roomManager = new RoomManager();
+        $museumManager = new MuseumManager();
+
         if (empty($roomNumber)) {
             $roomNumbers = $roomManager->getRoomNumbers();
             $roomNumber = $roomNumbers[rand(0, count($roomNumbers))];
         }
+
         $accessibleRooms = $roomManager->getAccessibleRooms($roomNumber);
+
+        $objectId = $_SESSION['arts'][$roomNumber];
+        $objectData = $museumManager->getObject($objectId);
+
         return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
-                'roomNumber' => $roomNumber]);
+                'roomNumber' => $roomNumber,'objectData' => $objectData]);
     }
 }
