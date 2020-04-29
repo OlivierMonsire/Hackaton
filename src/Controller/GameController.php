@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 class GameController extends AbstractController
 {
     /**
@@ -19,5 +18,3 @@ class GameController extends AbstractController
         return $this->twig->render('Game/index.html.twig');
     }
 }
-
-
