@@ -36,8 +36,12 @@ abstract class AbstractController
             session_start();
         }
 
+        if (!empty($_POST['login_name'])) {
+            $_SESSION['login_name'] = $_POST['login_name'];
+            header("Location:/game/index");
+        }
+
         if (empty($_SESSION['arts'])) {
-            $_SESSION['login_name'] = 'Benoit';
             $_SESSION['arts']=array();
             //var_dump($museumManager->getIdFromDpt(30));
             $museumManager=new MuseumManager();
@@ -61,7 +65,7 @@ abstract class AbstractController
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
         }
 
-        //var_dump($_SESSION);
+        var_dump($_SESSION);
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
