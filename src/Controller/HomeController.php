@@ -31,4 +31,18 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Home/replay.html.twig');
     }
+
+    public function restart()
+    {
+        $this->clearSession();
+        header('location:/./home/index');
+    }
+
+    private function clearSession()
+    {
+        unset($_SESSION['arts']);
+        unset($_SESSION['objectTaken']);
+        unset($_SESSION['goal']);
+        unset($_SESSION['exit']);
+    }
 }
