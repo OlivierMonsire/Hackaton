@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Model\MuseumManager;
+use App\Model\RoomManager;
 
 class HomeController extends AbstractController
 {
@@ -31,6 +32,9 @@ class HomeController extends AbstractController
         }
         var_dump($_SESSION['arts']);
 
+        //$roomManager=new RoomManager();
+        //var_dump($roomManager->getRoomNumbers());
+        //var_dump($roomManager->getAccessibleRooms(104));exit();
         return $this->twig->render('Home/index.html.twig');
     }
 }
