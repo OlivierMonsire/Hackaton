@@ -38,9 +38,6 @@ class GameController extends AbstractController
         $objectId = $_SESSION['arts'][$roomNumber];
         $objectData = $museumManager->getObject($objectId);
 
-        var_dump($_SESSION['goal']);
-        var_dump($_SESSION['objectTaken']);
-
         return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
                 'roomNumber' => $roomNumber,'objectData' => $objectData, 'messages' => $messages]);
     }
