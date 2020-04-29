@@ -29,6 +29,7 @@ class HomeController extends AbstractController
 
     public function replay()
     {
+        session_destroy();
         return $this->twig->render('Home/replay.html.twig');
     }
 
