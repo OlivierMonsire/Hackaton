@@ -1,6 +1,15 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {% include 'Game/_map.html.twig' %}
-    {% include 'Game/_navRoom.html.twig' %}
+    <section class="row">
+        <div class="col-6">
+            {% include 'Game/_map.html.twig' %}
+        </div>
+        <div class="col-6">
+            {% include 'Game/_img.html.twig' %}
+        </div>
+        <div class="col">
+            {% include 'Game/_navRoom.html.twig' %}
+        </div>
+    </section>
 {% endblock %}
