@@ -1,13 +1,9 @@
 <ul class="nav flex-column">
-    <li>Your position : Room 115 </li>
+    <li>Your position :  {{ roomNumber }} </li>
     <li>Go to :</li>
+    {% for room in accessibleRooms %}
     <li class="nav-item">
-        <a class="nav-link active" href="#">Room 111</a> <!-- Future porte bouclée via twig -->
+        <a class="nav-link" href="/./Game/index/{{ room }}">{{ room }}</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Room 116</a><!-- Future porte bouclée via twig -->
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Room 117</a><!-- Future porte bouclée via twig -->
-    </li>
+    {% endfor %}
 </ul>
