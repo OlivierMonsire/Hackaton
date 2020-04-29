@@ -75,10 +75,17 @@ class MuseumManager
             $idList=$content['objectIDs'];
             // convert the response (here in JSON) to an PHP array
 
-            $randKeys = array_rand($idList, $number);
-
-            foreach ($randKeys as $key) {
-                $objectIds[]=$idList[$key];
+            $totalObjectNumber=count($idList);
+            $iii=0;
+            while ($iii<$number) {
+                $index=rand(0, $totalObjectNumber);
+                $id=$idList[$index];
+                $objectData=$this->getObject($id);
+                $objectImageURL=$objectData['primaryImageSmall'];
+                if (strlen($objectImageURL)>5) {
+                    $iii++;
+                    $objectIds[]=$id;
+                }
             }
         }
 
