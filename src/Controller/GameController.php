@@ -19,12 +19,15 @@ class GameController extends AbstractController
     public function index($roomNumber = null)
     {
         $roomManager = new RoomManager();
+        $accessibleRooms = new RoomManager();
         if (empty($roomNumber)) {
             $roomNumbers = $roomManager->getRoomNumbers();
             $roomNumber = $roomNumbers[rand(0, count($roomNumbers))];
             $accessibleRooms = $roomManager->getAccessibleRooms($roomNumber);
-            return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
-                'roomNumber' => $roomNumber]);
         }
+        var_dump($roomNumber);
+        var_dump($accessibleRooms);
+        return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
+                'roomNumber' => $roomNumber]);
     }
 }
