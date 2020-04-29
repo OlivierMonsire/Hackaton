@@ -11,6 +11,7 @@ class GameController extends AbstractController
     /**
      * Display home page
      *
+     * @param null $roomNumber
      * @return string
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
@@ -19,7 +20,7 @@ class GameController extends AbstractController
     public function index($roomNumber = null)
     {
         $roomManager = new RoomManager();
-        $accessibleRooms = new RoomManager();
+        $accessibleRooms = array();
         if (empty($roomNumber)) {
             $roomNumbers = $roomManager->getRoomNumbers();
             $roomNumber = $roomNumbers[rand(0, count($roomNumbers))];
