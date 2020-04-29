@@ -27,10 +27,10 @@ class GameController extends AbstractController
             $roomNumber = $roomNumbers[rand(0, count($roomNumbers)-1)];
         }
 
-        $message[] = array();
+        $messages[] = array();
         if ($_SESSION['goal'] === $roomNumber) {
             $_SESSION['objectTaken'] = true;
-            $message[] = 'You got the object, find exit to get out';
+            $messages[] = 'You got the object, find exit to get out';
         }
 
         $accessibleRooms = $roomManager->getAccessibleRooms($roomNumber);
@@ -39,6 +39,6 @@ class GameController extends AbstractController
         $objectData = $museumManager->getObject($objectId);
 
         return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
-                'roomNumber' => $roomNumber,'objectData' => $objectData, '$message' => $message]);
+                'roomNumber' => $roomNumber,'objectData' => $objectData, 'messages' => $messages]);
     }
 }
