@@ -1,0 +1,8 @@
+body {
+    background-image: url("https://magazine.bellesdemeures.com/sites/default/files/article/image/metropolitan_museum_of_art_de_nuit.jpg");
+    width: 100vw;
+    color: white;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    text-align: center;
+}
