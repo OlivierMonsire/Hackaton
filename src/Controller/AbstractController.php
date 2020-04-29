@@ -37,7 +37,7 @@ abstract class AbstractController
             session_start();
         }
 
-        if (empty($_SESSION)) {
+        if (empty($_SESSION['arts'])) {
             $_SESSION['login_name'] = 'Benoit';
             $_SESSION['arts']=array();
             //var_dump($museumManager->getIdFromDpt(30));

@@ -36,7 +36,6 @@ class RoomManager extends AbstractManager
         foreach ($rooms as $room) {
             $roomIds[]=$room['number'];
         }
-
         return $roomIds;
     }
 
