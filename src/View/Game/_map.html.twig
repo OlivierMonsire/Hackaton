@@ -1,1 +1,3 @@
-<img class="image" src="/../assets/images/map.png" alt="map">
+{% for map in roomNumber %}
+    <img class="image" src="/../assets/images/{{ roomNumber.map }}" alt="{{ roomNumber.map }}">
+{% endfor %}
