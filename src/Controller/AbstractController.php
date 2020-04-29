@@ -29,6 +29,14 @@ abstract class AbstractController
      */
     public function __construct()
     {
+
+
+        if(empty($_SESSION)){
+            session_start();
+            $_SESSION['login_name'] = 'Benoit';
+            $_SESSION['arts']=array();
+        }
+
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
             $loader,
