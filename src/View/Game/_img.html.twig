@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
-    <img src="{{ objectData.primaryImageSmall }}" class="card-img-top" alt="...">
+    <img src="{{ objectData.primaryImageSmall }}" class="card-img-top" alt="{{ objectData.title }}">
     <div class="card-body">
-        <h5 class="nom de l'oeuvre">Card title</h5>
-        <p class="card-text">bref descriptif</p>
+        <h5 class="nom de l'oeuvre">{{ objectData.title }}</h5>
+        <p class="card-text">{{ objectData.creditLine }}</p>
     </div>
 </div>
