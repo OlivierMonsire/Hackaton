@@ -73,7 +73,6 @@ abstract class AbstractController
                 $_SESSION['exit'] = 100;
             }
         }
-
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
             $loader,
