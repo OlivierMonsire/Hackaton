@@ -28,7 +28,7 @@ class GameController extends AbstractController
         }
 
         $messages = array();
-        if ($_SESSION['goal'] === $roomNumber) {
+        if ($_SESSION['goal'] == $roomNumber) {
             $_SESSION['objectTaken'] = true;
             $messages[] = 'You got the object, find exit to get out';
         }

@@ -31,7 +31,6 @@ abstract class AbstractController
      */
     public function __construct()
     {
-
         $status = session_status();
         if ($status == PHP_SESSION_NONE) {
             session_start();
@@ -61,6 +60,8 @@ abstract class AbstractController
         if (empty($_SESSION['goal'])) {
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
         }
+
+        //var_dump($_SESSION);
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
