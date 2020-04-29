@@ -44,9 +44,6 @@ class MuseumManager
             // convert the response (here in JSON) to an PHP array
         }
 
-        $_SESSION['objectData'][$objectId]=$content;
-
-
         return $content;
     }
 
