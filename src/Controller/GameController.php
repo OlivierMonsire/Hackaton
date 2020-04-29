@@ -27,7 +27,7 @@ class GameController extends AbstractController
             $roomNumber = $roomNumbers[rand(0, count($roomNumbers)-1)];
         }
 
-        $messages[] = array();
+        $messages = array();
         if ($_SESSION['goal'] === $roomNumber) {
             $_SESSION['objectTaken'] = true;
             $messages[] = 'You got the object, find exit to get out';
