@@ -60,7 +60,14 @@ abstract class AbstractController
         if (empty($_SESSION['goal'])) {
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
         }
-
+        if (empty($_SESSION['exit'])) {
+            $random = rand(0,1);
+            if ($random < 0.5) {
+                $_SESSION['exit'] = 135;
+            }else {
+                $_SESSION['exit'] = 100;
+            }
+        }
         //var_dump($_SESSION);
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
