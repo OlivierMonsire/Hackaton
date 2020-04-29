@@ -55,6 +55,9 @@ abstract class AbstractController
                 $_SESSION['arts'][$roomNumber]=$artwork;
             }
         }
+        if (empty($_SESSION['goal'])) {
+            $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
+        }
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
