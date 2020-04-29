@@ -24,7 +24,7 @@ class GameController extends AbstractController
 
         if (empty($roomNumber)) {
             $roomNumbers = $roomManager->getRoomNumbers();
-            $roomNumber = $roomNumbers[rand(0, count($roomNumbers))];
+            $roomNumber = $roomNumbers[rand(0, count($roomNumbers)-1)];
         }
 
         $accessibleRooms = $roomManager->getAccessibleRooms($roomNumber);
