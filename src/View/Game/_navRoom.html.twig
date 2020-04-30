@@ -1,10 +1,13 @@
 <ul class="nav flex-column">
-    <li>Your position :  {{ roomNumber }} </li>
-    <li>Go to :</li>
-    {% for room in accessibleRooms %}
+    <li>Your are currently in the room number {{ roomNumber }}. </li>
+    <li>Go may choose to go to rooms :</li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="/./Game/index/{{ room }}">{{ room }}</a>
-    </li>
-    {% endfor %}
+        <div class="buttonsPad">
+            {% for room in accessibleRooms %}
+                <li class="nav-item">
+                    <a class="a-clue btn btn-primary btn-demo nav-link" href="/./Game/index/{{ room }}">{{ room }}</a>
+                    <img class="image map-clue" src="/./assets/images/map{{ room }}.png" alt="{{ room }}.png">
+                </li>
+            {% endfor %}
+        </div>
 </ul>

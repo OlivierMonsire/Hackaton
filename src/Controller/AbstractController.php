@@ -73,6 +73,13 @@ abstract class AbstractController
                 $_SESSION['exit'] = 100;
             }
         }
+
+        if (empty($_SESSION['roundCount']) ) {
+            $_SESSION['roundCount']=0;
+            $_SESSION['120times']=0;
+            $_SESSION['start']=0;
+        }
+
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
             $loader,
