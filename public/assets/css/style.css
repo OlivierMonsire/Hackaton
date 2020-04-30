@@ -7,12 +7,13 @@
 .gameContent{
     display:flex;
     flex-direction: row;
+    background-image: url("https://fuiqp.org/wp-content/uploads/2016/01/texture-8.jpg");
     height:100vh;
 }
 
 .navigation{
     flex:1;
-    background: #404040;
+    background: #2a2a2a;
     color : lightgrey;
 
     display:flex;
@@ -33,9 +34,7 @@
     justify-content: space-around;
     align-items: center;
 
-    background: url('../images/bg2.png');
-    background-repeat: no-repeat;
-    background-position: 50% 15%;
+
     background-size: 60%;
     backdrop-filter: opacity(0.25);
 }
@@ -58,7 +57,7 @@
     padding: 30px;
     border:none;
     font-weight: 500;
-    border-radius:0;
+    border-radius:2px;
     transition:0.5s;
     margin:8px;
     font-family: "Roboto", Arial, sans-serif;
@@ -99,15 +98,15 @@
 }
 
 @keyframes example {
-    from {    transform:translateY(0px);}
+    from {    transform:translateY(0);}
     to {    transform:translateY(-20px);}
 }
 
 .artCard{
-    box-shadow: 5px 5px 5px 0px rgba(194,194,194,0.5);
+    box-shadow: 5px 5px 5px 0 rgba(194,194,194,0.5);
 }
 
-mmain{
+main{
     position:relative;
 }
 

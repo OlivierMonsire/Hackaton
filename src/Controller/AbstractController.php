@@ -74,7 +74,7 @@ abstract class AbstractController
             }
         }
 
-        if (empty($_SESSION['roundCount']) ) {
+        if (empty($_SESSION['roundCount'])) {
             $_SESSION['roundCount']=0;
             $_SESSION['120times']=0;
             $_SESSION['start']=0;
