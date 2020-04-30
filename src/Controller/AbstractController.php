@@ -63,6 +63,10 @@ abstract class AbstractController
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
         }
 
+        if (empty($_SESSION['login_name'])) {
+            $_SESSION['login_name']='Wilder';
+        }
+
         if (empty($_SESSION['exit'])) {
             $random = rand(0, 1);
             if ($random < 0.5) {

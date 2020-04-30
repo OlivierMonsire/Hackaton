@@ -48,6 +48,7 @@ class HomeController extends AbstractController
         unset($_SESSION['roundCount']);
         unset($_SESSION['start']);
         unset($_SESSION['120times']);
+        unset($_SESSION['login_name']);
         header('location:/./home/index');
     }
 
@@ -66,6 +67,7 @@ class HomeController extends AbstractController
         unset($_SESSION['roundCount']);
         unset($_SESSION['start']);
         unset($_SESSION['120times']);
+        unset($_SESSION['login_name']);
         session_destroy();
     }
 }
