@@ -58,9 +58,7 @@ abstract class AbstractController
                 $_SESSION['arts'][$roomNumber]=$artwork;
             }
         }
-        if (empty($_SESSION['objectTaken'])) {
-            $_SESSION['objectTaken'] = false;
-        }
+
         if (empty($_SESSION['goal'])) {
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
         }
@@ -78,6 +76,8 @@ abstract class AbstractController
             $_SESSION['roundCount']=0;
             $_SESSION['120times']=0;
             $_SESSION['start']=0;
+            $_SESSION['pocket']="";
+            $_SESSION['objectTaken'] = false;
         }
 
         $loader = new FilesystemLoader(APP_VIEW_PATH);
