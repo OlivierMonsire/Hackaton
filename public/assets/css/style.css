@@ -117,6 +117,13 @@ mmain{
     right:10vw;
 }
 
+.start{
+    position:absolute;
+    top:5vh;
+    left:5vw;
+    background:orange;
+}
+
 @media screen and (max-width: 600px) {
     .art {
         background: none;

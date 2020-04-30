@@ -43,7 +43,8 @@ class GameController extends AbstractController
         }
 
         if ($_SESSION['objectTaken'] == true && $roomNumber == $_SESSION['exit']) {
-            header('location: /./home/replay');
+            /*header('location: /./home/replay');*/
+            header( "Refresh:10; url=/./home/replay", true, 303);
         }
 
         $accessibleRooms = $roomManager->getAccessibleRooms($roomNumber);
