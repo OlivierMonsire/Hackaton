@@ -39,6 +39,7 @@ class GameController extends AbstractController
 
         if ($_SESSION['goal'] == $roomNumber) {
             $_SESSION['objectTaken'] = true;
+            $_SESSION['pocket']=$objectData['primaryImageSmall'];
             $messages[] = 'You got the object, find exit to get out';
         }
 
@@ -52,9 +53,12 @@ class GameController extends AbstractController
         if ($roomNumber==120) {
             $_SESSION['120times']++;
         }
-
+        $_SESSION['pocket']='https://images.metmuseum.org/CRDImages/eg/web-large/11.215.163.jpg';
         return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
-                'roomNumber' => $roomNumber,'objectData' => $objectData, 'messages' => $messages]);
+            'roomNumber' => $roomNumber,
+            'objectData' => $objectData,
+            'messages' => $messages,
+            'pocket'=>$_SESSION['pocket']]);
     }
 
     private function getmessage($roomNumber, $objectData = null) : string
