@@ -38,6 +38,7 @@ class HomeController extends AbstractController
         }
 
         return $this->twig->render('Home/replay.html.twig', ['message' => $message]);
+
     }
 
     public function restart()
@@ -55,5 +56,6 @@ class HomeController extends AbstractController
         unset($_SESSION['roundCount']);
         unset($_SESSION['start']);
         unset($_SESSION['120times']);
+        session_destroy();
     }
 }
