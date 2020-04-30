@@ -18,6 +18,12 @@
         et on optimisant ton physique déjà au top, via des tutos youtube.
         Malheureusement, toutes ces activités t'ont fait oublier de prendre un plan le jour J!
         Mais, après tout, maintenant que tu es là..
-        <a class="button" href="/Game/index">Click!</a>
+
+        <form action="/Game/index" method="POST">
+            <label for="login_name">Votre pseudo:</label>
+            <input type="text" name="login_name">
+            <input class="btn nav-link end" type="submit" value="Let's start">
+        </form>
+
     </main>
 {% endblock %}
