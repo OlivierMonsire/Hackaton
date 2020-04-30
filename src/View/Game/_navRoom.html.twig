@@ -5,7 +5,7 @@
         <div class="buttonsPad">
             {% for room in accessibleRooms %}
                 <li class="nav-item">
-                    <a class="a-clue btn btn-primary btn-demo nav-link" href="/./Game/index/{{ room }}">{{ room }}</a>
+                    <a class="nav-link" href="/./Game/index/{{ room }}">{{ room }}</a>
                     <img class="image map-clue" src="/./assets/images/map{{ room }}.png" alt="{{ room }}.png">
                 </li>
             {% endfor %}
