@@ -62,8 +62,9 @@ class MuseumManager
 
         $response = $this->client->request(
             'GET',
-            'https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds='.$dptId
+            'https://collectionapi.metmuseum.org/public/collection/v1/objects?hasImages=true&departmentIds='.$dptId
         );
+
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 

@@ -38,7 +38,17 @@ class HomeController extends AbstractController
         }
 
         return $this->twig->render('Home/replay.html.twig', ['message' => $message]);
+    }
 
+    public function restartFast()
+    {
+        unset($_SESSION['objectTaken']);
+        unset($_SESSION['goal']);
+        unset($_SESSION['exit']);
+        unset($_SESSION['roundCount']);
+        unset($_SESSION['start']);
+        unset($_SESSION['120times']);
+        header('location:/./home/index');
     }
 
     public function restart()

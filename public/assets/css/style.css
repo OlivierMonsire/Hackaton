@@ -124,6 +124,12 @@ mmain{
     background:orange;
 }
 
+.status{
+    color:grey;
+}
+.pocket{
+    width : 50px;
+}
 @media screen and (max-width: 600px) {
     .art {
         background: none;
