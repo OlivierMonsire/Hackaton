@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=ZCOOL+XiaoWei&display=swap');
-
+@import "home.css";
 h1{
+    font-weight: bold;
     font-family: 'Kalam', cursive;
 }
+
 li{
     font-family: 'ZCOOL XiaoWei', serif;
 }
+
 div{
     font-family: 'ZCOOL XiaoWei', serif;
 }
+
 .intro{
     font-family: 'ZCOOL XiaoWei', serif;
     font-size: 20px;
