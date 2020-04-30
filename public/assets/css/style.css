@@ -5,6 +5,10 @@ h1{
     font-family: 'Kalam', cursive;
 }
 
+h2{
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
 li{
     font-family: 'ZCOOL XiaoWei', serif;
 }
@@ -16,6 +20,14 @@ div{
 .intro{
     font-family: 'ZCOOL XiaoWei', serif;
     font-size: 20px;
+    background-color: rgba(1, 12, 30, 0.7);
+    width: 45%;
+    align-items: center;
+    padding: 20px;
+}
+.nickname{
+    color: rgb(1, 12, 30);
+    font-weight: bold;
 }
 
 .image {
@@ -117,6 +129,7 @@ text-decoration: none;}
     padding-right:15%;
     padding-left:15%;
     text-align:center;
+    font-size: 20px;
 }
 
 @keyframes example {

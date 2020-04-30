@@ -55,6 +55,7 @@ class GameController extends AbstractController
         }
 
         return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
+            'login_name' => $_SESSION['login_name'],
             'roomNumber' => $roomNumber,
             'objectData' => $objectData,
             'messages' => $messages,
