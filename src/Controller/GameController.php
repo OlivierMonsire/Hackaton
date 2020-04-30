@@ -59,6 +59,7 @@ class GameController extends AbstractController
             'roomNumber' => $roomNumber,
             'objectData' => $objectData,
             'messages' => $messages,
+            'target' => $_SESSION['target'],
             'pocket'=>$_SESSION['pocket']]);
     }
 

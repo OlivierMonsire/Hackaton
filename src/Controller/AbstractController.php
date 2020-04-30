@@ -36,6 +36,8 @@ abstract class AbstractController
             session_start();
         }
 
+        $museumManager=new MuseumManager();
+
         if (!empty($_POST['login_name'])) {
             $_SESSION['login_name'] = $_POST['login_name'];
             header("Location:/game/index");
@@ -43,9 +45,6 @@ abstract class AbstractController
 
         if (empty($_SESSION['arts'])) {
             $_SESSION['arts']=array();
-            //var_dump($museumManager->getIdFromDpt(30));
-            $museumManager=new MuseumManager();
-            //var_dump($museumManager->getObject(543863));
             $roomManager = new RoomManager();
             $roomNumbers = $roomManager->getRoomNumbers();
             $getID = $museumManager->getIdFromDpt(count($roomNumbers));
@@ -61,6 +60,12 @@ abstract class AbstractController
 
         if (empty($_SESSION['goal'])) {
             $_SESSION['goal'] = array_rand($_SESSION['arts'], 1);
+        }
+
+        if (empty($_SESSION['target'])) {
+            $targetId=$_SESSION['arts'][$_SESSION['goal']];
+            $targetData=$museumManager->getObject($targetId);
+            $_SESSION['target']=$targetData['primaryImageSmall'];
         }
 
         if (empty($_SESSION['login_name'])) {

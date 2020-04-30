@@ -49,6 +49,7 @@ class HomeController extends AbstractController
         unset($_SESSION['start']);
         unset($_SESSION['120times']);
         unset($_SESSION['login_name']);
+        unset($_SESSION['target']);
         header('location:/./home/index');
     }
 
@@ -61,6 +62,7 @@ class HomeController extends AbstractController
     private function clearSession()
     {
         unset($_SESSION['arts']);
+        unset($_SESSION['target']);
         unset($_SESSION['objectTaken']);
         unset($_SESSION['goal']);
         unset($_SESSION['exit']);

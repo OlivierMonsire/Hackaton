@@ -171,9 +171,11 @@ main{
 
 .status{
     color:grey;
+    margin:20px;
 }
 .pocket{
     width : 50px;
+    border: thick solid grey;
 }
 @media screen and (max-width: 600px) {
     .art {

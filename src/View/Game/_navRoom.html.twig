@@ -10,4 +10,9 @@
                 </li>
             {% endfor %}
         </div>
+
+    {% if target is empty %}
+    {% else %}
+        <p class="status">You are trying to find the object <img src="{{ target }}" class="pocket" ></p>
+    {% endif %}
 </ul>
