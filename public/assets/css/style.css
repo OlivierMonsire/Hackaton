@@ -17,7 +17,7 @@ div{
     font-family: 'ZCOOL XiaoWei', serif;
 }
 
-.intro{
+.intro, .outro{
     font-family: 'ZCOOL XiaoWei', serif;
     font-size: 20px;
     background-color: rgba(1, 12, 30, 0.7);
@@ -198,5 +198,33 @@ main{
 
     .art, .navigation{
         height:50vh;
+    }
+
+    .intro{
+        width:95%;
+        font-size:16px;
+        margin-top:600px;
+    }
+
+    .outro{
+        width:95%;
+        font-size:16px;
+        margin-top:320px;
+    }
+
+    h2{
+        display:none;
+    }
+
+    h1{
+        display:none;
+    }
+
+    li, .artCard{
+        margin:10px;
+    }
+
+    .end{
+        position: unset;
     }
 }
