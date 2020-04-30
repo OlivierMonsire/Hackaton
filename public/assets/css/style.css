@@ -66,13 +66,13 @@ div{
 .nav-link{
     color:#fff;
     background: #f8b931;
-    box-shadow: 0 5px #c79733;
+    box-shadow: 0 3px #c79733;
     border: 1px solid #fac252;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 15px 25px 15px 25px;
     font-weight: 500;
-    border-radius:3px;
+    border-radius:2px;
     transition:0.5s;
     margin:8px;
     font-family: "Roboto", Arial, sans-serif;
@@ -87,8 +87,8 @@ text-decoration: none;}
 
 .nav-link:active {
     background: #fac252;
-    transform: translateY(3px);
-    box-shadow: 0 3px #ac7e20;
+    transform: translateY(2px);
+    box-shadow: 0 2px #ac7e20;
 }
 
 .map-clue{
@@ -138,6 +138,17 @@ main{
     position:absolute;
     top:5vh;
     left:5vw;
+    background: #f84831;
+    box-shadow: 0 3px #c74433;
+    border: 1px solid #fa6b52;
+}
+
+.start:hover{
+    background: #fa6b52;
+}
+
+.start:active {
+    background: #fa6b52;
 }
 
 .status{
