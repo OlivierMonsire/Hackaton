@@ -27,6 +27,7 @@ div{
 .gameContent{
     display:flex;
     flex-direction: row;
+    background-image: url("https://fuiqp.org/wp-content/uploads/2016/01/texture-8.jpg");
     height:100vh;
 }
 
@@ -53,9 +54,7 @@ div{
     justify-content: space-around;
     align-items: center;
 
-    background: url('../images/bg2.png');
-    background-repeat: no-repeat;
-    background-position: 50% 15%;
+
     background-size: 60%;
     backdrop-filter: opacity(0.25);
 }
@@ -70,28 +69,30 @@ div{
 
 .nav-link{
     color:#fff;
-    background:#228896;
-    box-sizing: border-box;
-    font-size: 12px;
+    background: #f8b931;
+    box-shadow: 0 3px #c79733;
+    border: 1px solid #fac252;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 30px;
-    border:none;
+    padding: 15px 25px 15px 25px;
     font-weight: 500;
-    border-radius:0;
+    border-radius:2px;
     transition:0.5s;
     margin:8px;
     font-family: "Roboto", Arial, sans-serif;
     display: inline-block;
-    text-align: center;
-    vertical-align: center;
-    touch-action: manipulation;
     cursor: pointer;
-    white-space: nowrap;
-    line-height: 1.42857;
-    user-select: none;
-    text-decoration: none;
+text-decoration: none;}
 
+.nav-link:hover {
+    background: #fac252;
+    color: #FFF;
+}
+
+.nav-link:active {
+    background: #fac252;
+    transform: translateY(2px);
+    box-shadow: 0 2px #ac7e20;
 }
 
 .map-clue{
@@ -119,15 +120,15 @@ div{
 }
 
 @keyframes example {
-    from {    transform:translateY(0px);}
+    from {    transform:translateY(0);}
     to {    transform:translateY(-20px);}
 }
 
 .artCard{
-    box-shadow: 5px 5px 5px 0px rgba(194,194,194,0.5);
+    box-shadow: 5px 5px 5px 0 rgba(194,194,194,0.5);
 }
 
-mmain{
+main{
     position:relative;
 }
 
@@ -141,7 +142,17 @@ mmain{
     position:absolute;
     top:5vh;
     left:5vw;
-    background:orange;
+    background: #f84831;
+    box-shadow: 0 3px #c74433;
+    border: 1px solid #fa6b52;
+}
+
+.start:hover{
+    background: #fa6b52;
+}
+
+.start:active {
+    background: #fa6b52;
 }
 
 .status{
