@@ -53,7 +53,7 @@ class GameController extends AbstractController
         if ($roomNumber==120) {
             $_SESSION['120times']++;
         }
-        $_SESSION['pocket']='https://images.metmuseum.org/CRDImages/eg/web-large/11.215.163.jpg';
+
         return $this->twig->render('Game/index.html.twig', ['accessibleRooms' => $accessibleRooms,
             'roomNumber' => $roomNumber,
             'objectData' => $objectData,
