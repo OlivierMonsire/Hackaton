@@ -1,3 +1,144 @@
 .image {
     width: 100%;
+    box-sizing: border-box;
+    padding:50px;
+}
+
+.gameContent{
+    display:flex;
+    flex-direction: row;
+    height:100vh;
+}
+
+.navigation{
+    flex:1;
+    background: #404040;
+    color : lightgrey;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    height:100%;
+    margin:auto;
+
+    position:relative;
+}
+
+.art{
+    flex:2;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: url('../images/bg2.png');
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    background-size: 60%;
+    backdrop-filter: opacity(0.25);
+}
+
+.buttonsPad{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:100%;
+}
+
+.nav-link{
+    color:#fff;
+    background:#228896;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 30px;
+    border:none;
+    font-weight: 500;
+    border-radius:0;
+    transition:0.5s;
+    margin:8px;
+    font-family: "Roboto", Arial, sans-serif;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.42857;
+    user-select: none;
+    text-decoration: none;
+
+}
+
+.map-clue{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity: 01%;
+}
+
+.a-clue:hover + .map-clue{
+    opacity:50%;
+    filter: hue-rotate(180deg);
+    mix-blend-mode:darken;
+}
+
+.message{
+    animation-name: example;
+    animation-duration: 2s;
+    transform:translateY(-20px);
+    animation-timing-function: ease-out;
+    font-style: italic;
+    padding-right:15%;
+    padding-left:15%;
+    text-align:center;
+}
+
+@keyframes example {
+    from {    transform:translateY(0px);}
+    to {    transform:translateY(-20px);}
+}
+
+.artCard{
+    box-shadow: 5px 5px 5px 0px rgba(194,194,194,0.5);
+}
+
+mmain{
+    position:relative;
+}
+
+.end{
+    position:absolute;
+    bottom:10vh;
+    right:10vw;
+}
+
+@media screen and (max-width: 600px) {
+    .art {
+        background: none;
+    }
+
+    .gameContent{
+        display:flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .nav-link{
+        padding:10px;
+    }
+
+    .image {
+        width: 90%;
+        box-sizing: border-box;
+        padding:10px;
+    }
+
+    .art, .navigation{
+        height:50vh;
+    }
 }

@@ -1,20 +1,34 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <section class="row">
-        <div class="col-4">
-            {% include 'Game/_maps.html.twig' %}
-        </div>
-        <div class="col-4">
-            {% include 'Game/_help.html.twig' %}
-        </div>
-        <div class="col-4">
-            {% include 'Game/_img.html.twig' %}
-        </div>
-        <div class="col-4">
-            {% include 'Game/_navRoom.html.twig' %}
+
+    <div class="gameContent">
+
+        <div class="navigation">
+            <div class="map">
+                {% include 'Game/_maps.html.twig' %}
+            </div>
+            <div class="menu">
+                {% include 'Game/_navRoom.html.twig' %}
+            </div>
         </div>
 
-        <a href="/./home/restart">Redemarrer la partie</a>
-    </section>
+        <div class="art">
+
+            <div class="artCard">
+                {% include 'Game/_img.html.twig' %}
+            </div>
+
+            <div class="story">
+                {% include 'Game/_help.html.twig' %}
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
 {% endblock %}
