@@ -3,7 +3,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items:center;
-
     background-image: url("https://magazine.bellesdemeures.com/sites/default/files/article/image/metropolitan_museum_of_art_de_nuit.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -17,8 +16,4 @@ main {
     margin:15%;
     font-weight: bold;
     background-color: rgba(91, 85, 92, 0.48);
-}
-
-h1{
-    font-weight: bold;
 }
