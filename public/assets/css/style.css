@@ -16,6 +16,14 @@ div{
 .intro{
     font-family: 'ZCOOL XiaoWei', serif;
     font-size: 20px;
+    background-color: rgba(1, 12, 30, 0.7);
+    width: 45%;
+    align-items: center;
+    padding: 20px;
+}
+.nickname{
+    color: rgb(1, 12, 30);
+    font-weight: bold;
 }
 
 .image {
